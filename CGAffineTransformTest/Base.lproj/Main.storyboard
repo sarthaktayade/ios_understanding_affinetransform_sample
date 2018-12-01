@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CGAffineTransformTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="caffeine.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="OeC-9m-RlE">
+                                <rect key="frame" x="67.5" y="123.5" width="240" height="240"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="DzX-56-755"/>
+                                    <constraint firstAttribute="width" secondItem="OeC-9m-RlE" secondAttribute="height" multiplier="1:1" id="EbQ-0c-B3o"/>
+                                </constraints>
+                            </imageView>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="ppx-5o-1Z4">
+                                <rect key="frame" x="14" y="617" width="347" height="31"/>
+                                <connections>
+                                    <action selector="angleInterpolationSliderChangedWithSlider:" destination="BYZ-38-t0r" eventType="valueChanged" id="Cn9-aM-Oe5"/>
+                                </connections>
+                            </slider>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="xdi-hp-YId">
+                                <rect key="frame" x="14" y="511" width="347" height="31"/>
+                                <connections>
+                                    <action selector="matrixInterpolationSliderChangedWithSlider:" destination="BYZ-38-t0r" eventType="valueChanged" id="npd-wH-0Di"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RJv-h0-kDn">
+                                <rect key="frame" x="187.5" y="609" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hVx-A6-ILa">
+                                <rect key="frame" x="187.5" y="503" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Affine Transform Matrix Interpolation" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O7I-Kq-HSO">
+                                <rect key="frame" x="47.5" y="474" width="280" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Angle Interpolation" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xiU-Ig-xJp">
+                                <rect key="frame" x="115" y="580" width="145" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wBV-Da-mhV">
+                                <rect key="frame" x="113" y="436" width="149" height="30"/>
+                                <state key="normal" title="Run UIView animation"/>
+                                <connections>
+                                    <action selector="runUIViewAnimationButtonTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="KpF-eX-wAO"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="xiU-Ig-xJp" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="4Jf-yc-M1S"/>
+                            <constraint firstItem="RJv-h0-kDn" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="5d4-Dg-ncH"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ppx-5o-1Z4" secondAttribute="bottom" constant="20" id="AkP-OX-9nf"/>
+                            <constraint firstItem="OeC-9m-RlE" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="B58-4p-lMd"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="xdi-hp-YId" secondAttribute="trailing" constant="16" id="CMk-sK-qNO"/>
+                            <constraint firstItem="ppx-5o-1Z4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="DRP-d9-NyV"/>
+                            <constraint firstItem="hVx-A6-ILa" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="E7h-IB-ufx"/>
+                            <constraint firstItem="ppx-5o-1Z4" firstAttribute="top" secondItem="RJv-h0-kDn" secondAttribute="bottom" constant="8" id="PsU-Nu-FYP"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ppx-5o-1Z4" secondAttribute="trailing" constant="16" id="QuO-tZ-5J0"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="RJv-h0-kDn" secondAttribute="trailing" constant="10" id="Qvr-Vr-G9u"/>
+                            <constraint firstItem="RJv-h0-kDn" firstAttribute="top" secondItem="xiU-Ig-xJp" secondAttribute="bottom" constant="8" id="QyP-zJ-OKp"/>
+                            <constraint firstItem="xdi-hp-YId" firstAttribute="top" secondItem="hVx-A6-ILa" secondAttribute="bottom" constant="8" id="RVs-yE-dPg"/>
+                            <constraint firstItem="hVx-A6-ILa" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="Xah-Qn-jfw"/>
+                            <constraint firstItem="OeC-9m-RlE" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" constant="-100" id="bTI-Rh-IBD"/>
+                            <constraint firstItem="xiU-Ig-xJp" firstAttribute="top" secondItem="xdi-hp-YId" secondAttribute="bottom" constant="39" id="fJM-lX-wTf"/>
+                            <constraint firstItem="hVx-A6-ILa" firstAttribute="top" secondItem="O7I-Kq-HSO" secondAttribute="bottom" constant="8" id="hgW-v3-JIt"/>
+                            <constraint firstItem="wBV-Da-mhV" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="jcG-Dj-Tor"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="hVx-A6-ILa" secondAttribute="trailing" constant="10" id="kqE-ue-vlo"/>
+                            <constraint firstItem="O7I-Kq-HSO" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="ohm-8n-T9d"/>
+                            <constraint firstItem="O7I-Kq-HSO" firstAttribute="top" secondItem="wBV-Da-mhV" secondAttribute="bottom" constant="8" id="q1j-7g-8lH"/>
+                            <constraint firstItem="xdi-hp-YId" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="rMG-x9-P8i"/>
+                            <constraint firstItem="RJv-h0-kDn" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="xrJ-WM-V6X"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="angleInterpolationSlider" destination="ppx-5o-1Z4" id="WHq-Le-dqh"/>
+                        <outlet property="angleInterpolationValuesLabel" destination="RJv-h0-kDn" id="Yvf-Qa-4TH"/>
+                        <outlet property="imageView" destination="OeC-9m-RlE" id="fC3-hk-pQu"/>
+                        <outlet property="matrixInterpolationSlider" destination="xdi-hp-YId" id="d4A-ry-rb2"/>
+                        <outlet property="matrixInterpolationValuesLabel" destination="hVx-A6-ILa" id="xPC-Cv-ORe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="81" y="439"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="caffeine.jpg" width="3604" height="3604"/>
+    </resources>
+</document>
